@@ -1,0 +1,6 @@
+{
+  "name": "Expense Tracker",
+  "description": "Private, on-device personal expense and income tracker with monthly budgets, recurring entries, and JSON backups.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

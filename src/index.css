@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --color-cream: #FAF6F0;
+  --color-cream-subtle: #F3ECE2;
+  --color-surface: #FFFFFF;
+  --color-ink: #1F1A17;
+  --color-ink-muted: #5C534A;
+  --color-border-warm: #E6DDD0;
+  --color-tomato: #C83219;
+  --color-tomato-hover: #A82813;
+  --color-tomato-soft: #FDECE8;
+  --color-herb: #255B34;
+  --color-herb-hover: #1C4728;
+  --color-herb-soft: #E8F3EB;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #FAF6F0;
+    color: #1F1A17;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #C83219;
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.bar-animate {
+  transition: width 220ms cubic-bezier(0.16, 1, 0.3, 1), height 220ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar-animate,
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
